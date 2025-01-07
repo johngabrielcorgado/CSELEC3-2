@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript for Beginners</title>
+    <!-- Link to a popular JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to JavaScript Basics</h1>
+    <p>Click the buttons below to see JavaScript in action.</p>
+
+    <!-- Button to show an alert -->
+    <button onclick="showAlert()">Show Alert</button>
+
+    <!-- Button to change text dynamically -->
+    <button onclick="changeText()">Change Text</button>
+
+    <!-- Button to fetch data using Axios -->
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <!-- Output area -->
+    <div id="output">Output will appear here.</div>
+
+    <script>
+        // Function to show an alert
+        function showAlert() {
+            alert('Hello, this is a JavaScript alert!');
+        }
+
+        // Function to change text dynamically
+        function changeText() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerText = 'You have successfully changed this text using JavaScript!';
+        }
+
+        // Function to fetch data using Axios
+        function fetchData() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerText = 'Loading data...';
+
+            axios.get('https://jsonplaceholder.typicode.com/posts/1')
+                .then(response => {
+                    outputDiv.innerText = `Fetched Data: \nTitle: ${response.data.title}\nBody: ${response.data.body}`;
+                })
+                .catch(error => {
+                    outputDiv.innerText = 'Error fetching data!';
+                    console.error(error);
+                });
+        }
+    </script>
+</body>
+</html>
