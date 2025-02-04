@@ -8,13 +8,21 @@ export const AppContainer = styled.div`
 
   font-family: 'Poppins', sans-serif;
   padding: 20px;
+
   background-color: #f3e5f5;
+
   min-height: 100vh;
+  
   display: flex;
+  
   flex-direction: column;
+  
   justify-content: center;
+  
   align-items: center;
+  
   text-align: center;
+  
   color: #9370db;
 
 `; 
@@ -39,6 +47,8 @@ export const InputField = styled.input`
 
   font-family: 'Poppins', sans-serif;
 
+  color: #9370db;
+
 `; 
 
   
@@ -62,13 +72,14 @@ export const AddButton = styled.button`
   cursor: pointer; 
 
   margin-left: 15px;
-    font-family: 'Poppins', sans-serif;
+
+  font-family: 'Poppins', sans-serif;
 
    
 
   &:hover { 
 
-    background-color: #45a049; 
+    background-color: #4a2574; 
 
   } 
 
@@ -96,6 +107,8 @@ export const TodoItem = styled.div`
 
   align-items: center; 
 
+  font-weight: bold;
+
 `; 
 
   
@@ -118,12 +131,30 @@ export const DeleteButton = styled.button`
 
   margin-left: 15px;
 
+  font-family: 'Poppins', sans-serif;
+
    
 
   &:hover { 
 
-    background-color: #e53935; 
+    background-color: #4a2574; 
 
   } 
 
 `; 
+
+export const EditButton = styled.button` 
+  background-color: #ff9800; 
+  color: white; 
+  padding: 5px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin-left: 15px;
+  font-family: 'Poppins', sans-serif;
+  
+  
+  &:hover { 
+    background-color: #e68900; 
+  }
+`;
